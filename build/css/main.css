@@ -1,0 +1,291 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/_reset.scss ***!
+  \**********************************************************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/*!***********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/globals.scss ***!
+  \***********************************************************************/
+body {
+  background-color: $bright-yellow;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  
+}
+
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/composition.scss ***!
+  \***************************************************************************/
+.l-container {
+  min-height: 600px;
+  height: 100vh;
+  max-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-container_card {
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(1fr, 1fr);
+  grid-template-rows: repeat(1fr, 1fr);
+}
+
+.l-top-section {
+  grid-column: 1 / span 2;
+}
+
+.l-bottom-left-section {
+  grid-column: 1 / span 1;
+}
+
+.l-bottom-right-section {
+  grid-column: 2 / span 1;
+}
+
+@media screen and (max-width: 1150px) {
+  .l-container {
+    height: max-content;
+  }
+
+  .l-container_card {
+    width: 80%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, 1fr, 1fr);
+  }
+
+  .l-top-section {
+    grid-column: 1 / span 1;
+  }
+
+  .l-bottom-right-section {
+    grid-column: 1 / span 1;
+  }
+}
+
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/utilities.scss ***!
+  \*************************************************************************/
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-cyan {
+  background-color: hsl(179, 62%, 43%);
+}
+
+.bg-light-cyan {
+  background: hsla(179, 62%, 43%, 0.8);
+}
+
+.bg-bright-yellow {
+  background-color: hsl(71, 73%, 54%);
+}
+
+.bg-light-gray {
+  background-color: hsl(204, 43%, 93%);
+}
+
+.bg-grayish-blue {
+  background-color: hsl(218, 22%, 67%);
+}
+
+.color-white {
+  color: #fff;
+}
+
+.color-cyan {
+  color: hsl(179, 62%, 43%);
+}
+
+.color-bright-yellow {
+  color: hsl(71, 73%, 54%);
+}
+
+.color-light-gray {
+  color: hsl(204, 43%, 93%);
+}
+
+.color-grayish-blue {
+  color: hsl(218, 22%, 67%);
+}
+
+.flow {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.flow > * {
+  margin-left: 40px;
+  margin-right: 55px;
+}
+
+
+
+/*!*********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/block.scss ***!
+  \*********************************************************************/
+.b-top-section {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  .b-top-section_sub-heading {
+    margin-top: 15px;
+    margin-bottom: 8px;
+  }
+  .b-top-section_description {
+    font-size: 15px;
+  }
+}
+
+.b-bottom-right-section {
+  border-bottom-right-radius: 8px;
+  padding-right: 30px;
+
+  .b-bottom-right-section_description {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.b-bottom-left-section {
+  border-bottom-left-radius: 8px;
+}
+
+.b-bottom-left-section_heading {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+
+  .b-bottom-left-section_heading_tenure {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+}
+
+.b-bottom-left-section_description {
+  font-size: 15px;
+  margin-bottom: 25px;
+}
+
+.b-bottom-left-section_button {
+  width: calc(100% - 80px);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .b-top-section {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    .b-top-section_sub-heading {
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
+    .b-top-section_description {
+      font-size: 15px;
+    }
+  }
+
+  .b-bottom-left-section {
+    border-bottom-left-radius: 0;
+  }
+
+  .b-bottom-right-section {
+    border-bottom-right-radius: 0px;
+  }
+}
+
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./styles/exception.scss ***!
+  \*************************************************************************/
+.b-bottom-left-section_button[data-state='button-hovered']:hover {
+  background-color: hsl(71, 83%, 46%);
+}
+
+/*!************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./styles/index.scss ***!
+  \************************************************************************************************************/
+ 
